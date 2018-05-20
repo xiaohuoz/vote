@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>星云投</title>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+        <div id="header" class="noExtension hide">
+            本页面需要安装
+            <a href="https://github.com/ChengOrangeJu/WebExtensionWallet">WebExtensionWallet</a>以便正常工作
+        </div>
+        <nav class="navbar navbar-inverse navbar-static-top" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="https://nebulas.io/index.html">
+                        <img alt="Nebulas" src="./nebulasx60-white.png" style="height:100%"> 
+                        <!-- <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p> -->
+                    </a>
+                    <a class="navbar-brand" href="./index.html">
+                        星云投
+                        <!-- <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p> -->
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="./index.html">首页</a></li>
+                        <li><a href="./instructions.html">使用说明</a></li>
+                        <li class="active"><a href="./suggestion.html">反馈建议</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid panel panel-default" style="margin-bottom: 96px;padding: 40px 60px;">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="contact" class="col-sm-2 control-label">您的联系方式</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="邮箱/电话/QQ号码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">建议</label>
+                    <div class="col-sm-10">
+                        <textarea id="suggestion" class="form-control" rows="3" placeholder="请输入您的意见或建议"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="button" class="btn btn-primary" onclick="javascript:handleclick()">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container">
+                    <h3 style="text-align: center">联系我们 </h3>
+                    <p style="text-align: center">邮箱：agier9@163.com</p>
+                </div>
+            </nav>
+        <div id="footer" class="noExtension hide">
+            <font>本站由<a href="https://nebulas.io/">星云链</a>驱动</font>
+            <a size="2" href="https://incentive.nebulas.io/cn/signup.html?invite=4vfmV">成为开发者，获取百万大奖</a>
+        </div>
+    </body>
+    <script type="text/javascript" src="./lib/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+    <script type="text/javascript" src="./lib/nebPay.js"></script>
+    <script type="text/javascript" src="./lib/nebulas.js"></script>
+    <!-- <script type="text/javascript" src="./util.js"></script> -->
+    <!-- <script type="text/javascript" src="./index.js"></script> -->
+    <script type="text/javascript">
+        function handleclick(e){
+            console.log('todo');
+            // e.preventDefault();
+            if($('#contact').val() && $('suggestion').val()){
+                alert('谢谢您的反馈');
+            }else{
+                alert('请输入完整信息');
+            }
+        }
+    </script>
+</html>
